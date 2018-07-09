@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+	#not dealing with authentication for this
+  # protect_from_forgery with: :exception
 end

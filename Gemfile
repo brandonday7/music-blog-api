@@ -23,6 +23,8 @@ gem 'pg'
 gem 'awesome_print', require: 'ap'
 gem 'graphql', '~> 1.8.2'
 gem "graphiql-rails"
+gem 'rack-cors', require: 'rack/cors'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
