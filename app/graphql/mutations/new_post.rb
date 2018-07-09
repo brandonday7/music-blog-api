@@ -4,12 +4,13 @@ class Mutations::NewPost < GraphQL::Schema::RelayClassicMutation
 	argument :description, String, required: true
 	argument :track_title, String, required: true
 	argument :artist_name, String, required: true
+	argument :image, String, required: true
 
   field :posted, Boolean, null: true
   field :errors, [String], null: false
 
-  def resolve (title:, description:, track_title:, artist_name:)
-  	post = Post.create!(title: title, description: description)
+  def resolve (title:, description:, track_title:, artist_name:, image:)
+  	post = Post.create!(title: title, description: description, image_ref: image)
 
   	if !(artist = Artist.find_by(name: artist_name))
   		artist = new_artist(artist_name)
