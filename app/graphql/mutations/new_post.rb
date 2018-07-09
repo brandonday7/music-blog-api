@@ -41,13 +41,14 @@ class Mutations::NewPost < GraphQL::Schema::RelayClassicMutation
 end
 
 # mutation {
-#   signUp(input: {
-#     name: "Brandon Day", 
-#     email: "brandon@autzu.com", 
-#     password: "12345678", 
-#     organization: "Autzu"
+#   newPost(input: {
+#     title: "test1",
+#     description: "test2",
+#     trackTitle: "Reborn",
+#     artistName: "Kids See Ghosts",
+#     image: "jhdfbnk"
 #   }) {
-#     signedUp,
+#     posted,
 #     errors
 #   }
 # }

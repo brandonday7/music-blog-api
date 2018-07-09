@@ -23,13 +23,8 @@ class Mutations::DeletePost < GraphQL::Schema::RelayClassicMutation
 end
 
 # mutation {
-#   signUp(input: {
-#     name: "Brandon Day", 
-#     email: "brandon@autzu.com", 
-#     password: "12345678", 
-#     organization: "Autzu"
-#   }) {
-#     signedUp,
+#   deletePost(input: {id: 20}) {
+#     deleted
 #     errors
 #   }
 # }
