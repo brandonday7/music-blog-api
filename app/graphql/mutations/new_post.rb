@@ -1,15 +1,11 @@
 class Mutations::NewPost < GraphQL::Schema::RelayClassicMutation
 
-	argument :title, String, required: true
-	argument :description, String, required: true
-	argument :track_title, String, required: true
-	argument :artist_name, String, required: true
-	argument :image, String, required: true
+	argument :params, Types::NewPostAttributes, required: true
 
   field :posted, Boolean, null: true
   field :errors, [String], null: false
 
-  def resolve (title:, description:, track_title:, artist_name:, image:)
+  def resolve (params:)
   	post = Post.create!(title: title, description: description, image_ref: image)
 
   	if !(artist = Artist.find_by(name: artist_name))
