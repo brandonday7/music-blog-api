@@ -6,13 +6,35 @@ class Mutations::DeletePost < GraphQL::Schema::RelayClassicMutation
   field :errors, [String], null: false
 
   def resolve (id:)
-    post = Post.destroy(id)
+    post = Post.find(id)
+    if post 
+      puts "***"
+      puts "in here"
+      track = post.track
+      artist = track.artist
+      track.delete
+      puts "deleted track"
 
-    if post
+      if artist.tracks.length == 1
+        artist.delete
+        puts "deleted artist"
+      end
+
+      deleted = post.delete
+      puts "deleted post"
+
+    end
+    if deleted
     	{
+
     		deleted: true,
     		errors: []
     	}
+    else 
+      {
+        deleted: false,
+        errors: ["Failed to delete post"]
+      }
     end
   rescue ActiveRecord::RecordNotFound      
     {
