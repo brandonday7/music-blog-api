@@ -2,7 +2,7 @@ class Types::QueryType < Types::BaseObject
   field :get_posts, [Types::PostType], null: false,
     description: "Returns all posts"
   def get_posts
-   	Post.all
+   	Post.all.reverse
   end
 
   field :get_tracks, [Types::TrackType], null: false,
