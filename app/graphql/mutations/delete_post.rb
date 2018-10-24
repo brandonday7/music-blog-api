@@ -12,7 +12,7 @@ class Mutations::DeletePost < GraphQL::Schema::RelayClassicMutation
       artist = track.artist
       track.delete
 
-      if artist.tracks.length == 1
+      if artist.tracks.length == 0
         artist.delete
       end
 
