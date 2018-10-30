@@ -2,7 +2,7 @@
 
 ### Welcome to the Music Blog Backend! This application runs alongside the [MUSIC BLOG REACT FRONTEND](https://github.com/brandonday7/music-blog) to provide you with your very own music blog.
 
-[Heroku example](http://brandonday-music-blog.herokuapp.com/) (Free dyno server may take a few minutes to boot up. Be patient!)
+[Heroku example](http://brandonday-music-blog.herokuapp.com/) (Free dyno server may take up to a minute to boot up)
 
 #### The backend is written in Ruby on Rails using Graphql-Ruby and Postgres.
 
