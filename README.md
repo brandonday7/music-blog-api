@@ -1,24 +1,48 @@
-# README
+# MUSIC BLOG RAILS BACKEND
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Welcome to the Music Blog Backend! This application runs alongside the [MUSIC BLOG REACT FRONTEND](https://github.com/brandonday7/music-blog) to provide you with your very own music blog.
 
-Things you may want to cover:
+### The backend is written in Ruby on Rails using Graphql-Ruby and Postgres.
 
-* Ruby version
+### In this application, a relational database is used to connect TRACKS and ARTISTS, and display them on the front end as components of individual POSTS!
 
-* System dependencies
+### Here's how to get set up:
 
-* Configuration
+1. Clone repo:
 
-* Database creation
+```
+git clone git@github.com:brandonday7/music-blog-api.git
+```
 
-* Database initialization
+2. Install dependencies:
 
-* How to run the test suite
+```
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Create environment variables:
 
-* Deployment instructions
+```
+In blog-api/config, create a file called application.yml
+Copy and paste the following into it:
 
-* ...
+POSTGRES_HOST: "localhost"
+POSTGRES_DB: "database_name_here"
+POSTGRES_USER: "postgres_user_name_here"
+POSTGRES_PASSWORD: "postgres_password_here"
+POSTGRES_PORT: "5433"
+```
+
+4. Set up database (create, migrate, seed):
+
+```
+rails db:setup
+```
+
+5. Start server
+
+```
+rails s -p 3001
+```
+
+### Now it's time to set up your [front end](https://github.com/brandonday7/music-blog)!
