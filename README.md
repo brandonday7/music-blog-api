@@ -1,12 +1,14 @@
 # MUSIC BLOG RAILS BACKEND
 
-## Welcome to the Music Blog Backend! This application runs alongside the [MUSIC BLOG REACT FRONTEND](https://github.com/brandonday7/music-blog) to provide you with your very own music blog.
+### Welcome to the Music Blog Backend! This application runs alongside the [MUSIC BLOG REACT FRONTEND](https://github.com/brandonday7/music-blog) to provide you with your very own music blog.
 
-### The backend is written in Ruby on Rails using Graphql-Ruby and Postgres.
+[Heroku example](http://brandonday-music-blog.herokuapp.com/) (Free dyno server may take a few minutes to boot up. Be patient!)
 
-### In this application, a relational database is used to connect TRACKS and ARTISTS, and display them on the front end as components of individual POSTS!
+#### The backend is written in Ruby on Rails using Graphql-Ruby and Postgres.
 
-### Here's how to get set up:
+#### In this application, a relational database is used to connect TRACKS and ARTISTS, and display them on the front end as components of individual POSTS!
+
+#### Here's how to get set up:
 
 1. Clone repo:
 
